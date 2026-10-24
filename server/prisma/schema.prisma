@@ -1,0 +1,77 @@
+// server/prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ServiceType {
+  AI_AUTOMATION
+  WEB_APPLICATION
+  MOBILE_APPLICATION
+  BACKEND_CLOUD
+  DIGITAL_MARKETING
+  CUSTOM_SOFTWARE
+}
+
+enum BudgetRange {
+  NOT_DECIDED
+  UNDER_25K
+  FROM_25K_TO_75K
+  FROM_75K_TO_200K
+  ABOVE_200K
+}
+
+enum Timeline {
+  ASAP
+  WITHIN_ONE_MONTH
+  ONE_TO_THREE_MONTHS
+  MORE_THAN_THREE_MONTHS
+  FLEXIBLE
+}
+
+enum ProjectStage {
+  IDEA
+  REQUIREMENTS_DEFINED
+  DESIGN_COMPLETED
+  DEVELOPMENT_STARTED
+  EXISTING_IMPROVEMENT
+}
+
+enum InquiryStatus {
+  NEW
+  REVIEWING
+  CONTACTED
+  CLOSED
+}
+
+model Inquiry {
+  id                   Int           @id @default(autoincrement())
+  referenceCode        String        @unique
+  name                 String        @db.VarChar(100)
+  email                String        @db.VarChar(254)
+  companyName          String?       @db.VarChar(100)
+  serviceType          ServiceType
+  projectTitle         String        @db.VarChar(120)
+  projectDescription   String        @db.VarChar(2000)
+  problemStatement     String        @db.VarChar(1000)
+  desiredOutcomes      String        @db.VarChar(1000)
+  technicalRequirements String?      @db.VarChar(800)
+  existingSystemDetails String?      @db.VarChar(800)
+  budgetRange          BudgetRange?
+  timeline             Timeline?
+  projectStage         ProjectStage?
+  consentRecordedAt    DateTime
+  status               InquiryStatus @default(NEW)
+  createdAt            DateTime      @default(now())
+  updatedAt            DateTime      @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([serviceType])
+  @@index([createdAt])
+}
