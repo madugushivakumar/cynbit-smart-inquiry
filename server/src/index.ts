@@ -4,7 +4,11 @@ import { connectDatabase, disconnectDatabase } from './config/database';
 
 async function main() {
   try {
-    await connectDatabase();
+    try {
+      await connectDatabase();
+    } catch (dbError) {
+      console.warn('[Database] Warning: Initial database connection failed. The server is still running. Inquiries will fail until a valid PostgreSQL DATABASE_URL is reachable.');
+    }
 
     const app = createApp();
 
