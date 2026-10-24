@@ -18,7 +18,7 @@ Ensure you have the following installed locally:
 
 ### 2.1 Clone and Install Dependencies
 ```bash
-git clone https://github.com/shivamvk/cynbit-smart-inquiry.git
+git clone https://github.com/madugushivakumar/cynbit-smart-inquiry.git
 cd cynbit-smart-inquiry
 
 # Install client dependencies

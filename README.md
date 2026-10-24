@@ -101,7 +101,7 @@ cynbit-smart-inquiry/
 ### 2. Setup & Install
 ```bash
 # Clone the repository
-git clone https://github.com/shivamvk/cynbit-smart-inquiry.git
+git clone https://github.com/madugushivakumar/cynbit-smart-inquiry.git
 cd cynbit-smart-inquiry
 
 # Install client and server dependencies
@@ -173,4 +173,4 @@ cd ../client && npm run build
 - **Role:** Full Stack Developer Intern Assessment
 - **Company:** Cynbit Technologies
 - **Email:** shiva.madugu.dev@gmail.com
-- **LinkedIn / GitHub:** [github.com/shivamvk](https://github.com/shivamvk)
+- **GitHub:** [github.com/madugushivakumar](https://github.com/madugushivakumar)
