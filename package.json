@@ -1,0 +1,18 @@
+{
+  "name": "cynbit-smart-inquiry",
+  "version": "1.0.0",
+  "description": "Cynbit Smart Project Brief Builder — Full Stack Assessment",
+  "private": true,
+  "scripts": {
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test",
+    "db:migrate": "cd server && npm run db:migrate",
+    "db:generate": "cd server && npm run db:generate"
+  },
+  "author": "Shiva Kumar Madugu",
+  "license": "MIT"
+}
