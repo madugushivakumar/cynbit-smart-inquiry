@@ -161,6 +161,7 @@ cd ../client && npm run build
 ## 📖 Detailed Documentation
 
 - [Website Audit & Opportunity Analysis](docs/audit-and-improvement.md)
+- [Execution Notes & Campaign Rationale](docs/execution-notes-and-campaign-rationale.md)
 - [Complete Technical Report & Architecture](docs/technical-report.md)
 - [REST API Specification](docs/api-specification.md)
 - [Deployment Guide](docs/deployment-guide.md)
